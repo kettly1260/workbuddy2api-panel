@@ -1,6 +1,7 @@
 services:
   wb2api:
-    build: .
+    image: ghcr.io/kettly1260/workbuddy2api-panel:latest
+    # build: .  # 如需本地编译可取消注释本行并注释上面的 image 行
     container_name: workbuddy2api
     restart: unless-stopped
     # 容器默认以 app 用户（uid 10001）运行。宿主机挂载目录属主不同会导致
